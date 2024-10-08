@@ -26,7 +26,7 @@ const CreateNote = () => {
                 noteId: noteId
             })
             return response.data
-        }
+        },
     })
 
     const createNoteBook = useMutation({

@@ -10,6 +10,7 @@ import { eq } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { $notes } from '@/lib/db/schema'
 import Image from 'next/image'
+
 const Dashboard = async () => {
   const { userId } = auth();
 

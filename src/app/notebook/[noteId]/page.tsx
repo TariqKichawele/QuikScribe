@@ -23,12 +23,7 @@ const Note = async ({ params: { noteId } }: Props) => {
 
     const user = await clerkClient.users.getUser(userId);
 
-    const notes = await db
-        .select()
-        .from($notes)
-        .where(and(eq($notes.id, parseInt(noteId)), eq($notes.userId, userId)))
-    
-    if(notes.length != 1) redirect("/dashboard");
+    const notes = await db.select().from($notes).where(and(eq($notes.id, parseInt(noteId)), eq($notes.userId, userId)))
 
     const note = notes[0];
 
