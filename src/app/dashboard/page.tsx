@@ -11,10 +11,21 @@ import { db } from '@/lib/db'
 import { $notes } from '@/lib/db/schema'
 import Image from 'next/image'
 
+import { Metadata } from 'next'
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: 'Dashboard | AI Note Taking App',
+  description: 'View and manage your AI-powered notes',
+}
+
 const Dashboard = async () => {
   const { userId } = auth();
 
   const notes = await db.select().from($notes).where(eq($notes.userId, userId!));
+
 
   return (
     <>
