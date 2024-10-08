@@ -17,7 +17,7 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: 'Dashboard | AI Note Taking App',
+  title: 'QuikScribe',
   description: 'View and manage your AI-powered notes',
 }
 
